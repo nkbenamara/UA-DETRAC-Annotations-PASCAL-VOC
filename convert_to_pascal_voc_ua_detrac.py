@@ -7,6 +7,9 @@ import shutil
 
 
 def format_vehicle_xml_object_xml(output_file,path_image,folder_name, id_object, class_name, xmin, ymin, xmax, ymax):
+    """
+    This function paste data to the pascal voc annotations
+    """
     template_xml_file= ET.parse(output_file)
     root = template_xml_file.getroot()
     path=root.find('path')
@@ -47,16 +50,18 @@ def format_vehicle_xml_object_xml(output_file,path_image,folder_name, id_object,
     with open(output_file, "wb") as f:
         f.write(vehicle_xml)
         
-
+#Initialize Paths
 ROOT_PATH=os.getcwd()
 
+#Images Paths
 TRAIN_PATH = ROOT_PATH + '/Insight-MVT_Annotation_Train/'
 TEST_PATH = ROOT_PATH + '/Insight-MVT_Annotation_Test/'
 
+#Original Annotations Paths
 TRAIN_ANNOT_PATH = ROOT_PATH + '/DETRAC-Train-Annotations-XML/'
 TEST_ANNOT_PATH = ROOT_PATH + '/DETRAC-Test-Annotations-XML/'
 
-
+#Destionation Paths (To save PASCAL VOC annotations)
 SAVE_TRAIN_PATH=ROOT_PATH + '/train_annotations_voc_format/'
 SAVE_TEST_PATH=ROOT_PATH + '/test_annotations_voc_format/'
 
@@ -87,6 +92,7 @@ for P in range(0, len(PATHS)):
             output_file_name= SAVE_PATHS[P]+folder+'/'+frames[F].attrib['num']+'.xml'
             shutil.copyfile(template_file, output_file_name)
             for target in targets:
+                #retrieve some data
                 id=target.attrib['id']
                 
                 box=target.find('box')

@@ -17,28 +17,32 @@ The python script provided in this repository allows:
 
 (To) Converted XML Annotations (UA-DETRAC in PASCAL VOC Format: 
 
-   <object id="1">
-      <name>car</name>
-      <pose>Unspecified</pose>
-      <truncated>0</truncated>
-      <difficult>0</difficult>
-      <bndbox>
-         <xmin>593</xmin>
-         <ymin>379</ymin>
-         <xmax>753</xmax>
-         <ymax>541</ymax>
-      </bndbox>
-   </object>
-   <object id="2">
-      <name>car</name>
-      <pose>Unspecified</pose>
-      <truncated>0</truncated>
-      <difficult>0</difficult>
-      <bndbox>
-         <xmin>558</xmin>
-         <ymin>121</ymin>
-         <xmax>605</xmax>
-         <ymax>164</ymax>
-      </bndbox>
-   </object>
+         
+         <object id="1">
+               <name>car</name>
+               <pose>Unspecified</pose>
+               <truncated>0</truncated>
+               <difficult>0</difficult>
+               <bndbox>
+                  <xmin>593</xmin>
+                  <ymin>379</ymin>
+                  <xmax>753</xmax>
+                  <ymax>541</ymax>
+               </bndbox>
+            </object>
+            <object id="2">
+               <name>car</name>
+               <pose>Unspecified</pose>
+               <truncated>0</truncated>
+               <difficult>0</difficult>
+               <bndbox>
+                  <xmin>558</xmin>
+                  <ymin>121</ymin>
+                  <xmax>605</xmax>
+                  <ymax>164</ymax>
+               </bndbox>
+            </object>
+         
+
+   
    

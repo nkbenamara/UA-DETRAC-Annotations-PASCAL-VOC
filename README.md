@@ -1,7 +1,7 @@
 # UA-DETRAC-Annotations-PASCAL-VOC
 The python script provided in this repository allows:
 - Converting UA-DETRAC XML Annotations to PASCAL VOC XML annotations.
-- Generating an annotation for each frame in a separate file, instead of a single annotation per sequence.
+- Generating an annotation for each frame in a separate XML file, instead of a single annotation per sequence.
 
 (From) Original XML Annotations (UA-DETRAC):
 
@@ -15,7 +15,7 @@ The python script provided in this repository allows:
          </target>
          
 
-(To) Converted XML Annotations (UA-DETRAC in PASCAL VOC Format: 
+(To) Converted XML Annotations in PASCAL VOC Format (UA-DETRAC): 
 
          
          <object id="1">
